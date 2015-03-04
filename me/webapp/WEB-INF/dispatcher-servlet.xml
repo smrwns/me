@@ -23,7 +23,7 @@
 	<mvc:resources location="/js/" mapping="/js/**" />
 	<mvc:resources location="/lib/" mapping="/lib/**" />
 	<mvc:resources location="/img/" mapping="/img/**" />
-	<mvc:resources location="/fonts/" mapping="/lib/**" />
+	<mvc:resources location="/fonts/" mapping="/fonts/**" />
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>
