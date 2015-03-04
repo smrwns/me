@@ -1,0 +1,90 @@
+<meta charset="utf-8">
+<script>
+	$(function() {
+		$('[me-event="nav"] li a').on("click", changeContents);
+	});
+	
+	function changeContents(e) {
+		$('[me-event="nav"] li').removeClass("active");
+		var li = $(this).parent();
+		$(li).addClass("active");
+		
+		switch ($(this).text()) {
+			case "daily":
+				$("article").load("/test/test");
+				break;
+			case "picture":
+				$("article").load("/test/test");
+				break;
+			case "cooking":
+				$("article").load("/test/test");
+				break;
+			case "study":
+				$("article").load("/test/test");
+				break;
+			case "dev":
+				break;
+			case "ARCHITECTURE":
+				$("article").load("/test/test");
+				break;
+			case "DB":
+				$("article").load("/test/test");
+				break;
+			case "JAVA":
+				$("article").load("/test/test");
+				break;
+			case "FRAMEWORK":
+				$("article").load("/test/test");
+				break;
+			case "SCRIPT":
+				$("article").load("/test/test");
+				break;
+			case "STRUCTURE":
+				$("article").load("/test/test");
+				break;
+			case "TOOL":
+				$("article").load("/test/test");
+				break;
+			default:
+				$("article").load("/test/test");
+				//index
+				;
+		}
+		
+		e.preventDefault();
+	}
+</script>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>
+		</button>
+		<a class="navbar-brand" href="/">ME</a>
+	</div>
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav" me-event="nav">
+			<li><a href="#">daily</a></li>
+			<li><a href="#">picture</a></li>
+			<li><a href="#">cooking</a></li>
+			<li><a href="#">study</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">dev<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">ARCHITECTURE</a></li>
+					<li><a href="#">DB</a></li>
+					<li><a href="#">JAVA</a></li>
+					<li><a href="#">FRAMEWORK</a></li>
+					<li><a href="#">SCRIPT</a></li>
+					<li><a href="#">STRUCTURE</a></li>
+					<li><a href="#">TOOL</a></li>
+				</ul>
+			</li>
+			<li><a href="#">team</a></li>
+			<li><a href="#">contact</a></li>
+		</ul>
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group"><input type="text" class="form-control" placeholder="Search"></div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</nav>
