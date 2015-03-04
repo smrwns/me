@@ -1,0 +1,14 @@
+@CHARSET "utf-8";
+
+/* index */
+#indexCarousel	{ margin-top: 5px; margin-bottom: 5px; }
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	width: 400px;
+	margin: auto;
+}
+
+
+.thumbnail-desc	{ min-height: 190px; }
+

@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>thirty.smrwns.me</title>
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<style>
-		.carousel-inner > .item > img,
-		.carousel-inner > .item > a > img {
-		    width: 400p;
-		    margin: auto;
-		}
-		
-	</style>
+	<link href="/css/common.css" rel="stylesheet">
+	<link href="/css/me.css" rel="stylesheet">
 </head>
 <body>
-	<!-- 고정영역 -->
+	<!-- 고정 영역 -->
 	<header>
 		<nav>
-			<a href="#"><button type="button" class="btn btn-default">main</button></a>
-			<a href="#"><button type="button" class="btn btn-default">profile</button></a>
-			<a href="#"><button type="button" class="btn btn-default">work</button></a>
-			<a href="#"><button type="button" class="btn btn-default">daily</button></a>
-			<a href="#"><button type="button" class="btn btn-default">picture</button></a>
-			<a href="#"><button type="button" class="btn btn-default">cooking</button></a>
-			<a href="#"><button type="button" class="btn btn-default">study</button></a>
-			<a href="#"><button type="button" class="btn btn-default">dev</button></a>
-			<a href="#"><button type="button" class="btn btn-default">team</button></a>
-			<a href="#"><button type="button" class="btn btn-default">contact</button></a>
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">main</a></li>
+					<li><a href="#">daily</a></li>
+					<li><a href="#">picture</a></li>
+					<li><a href="#">cooking</a></li>
+					<li><a href="#">study</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">dev<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+							<li><a href="#">ARCHITECTURE</a></li>
+							<li><a href="#">DB</a></li>
+							<li><a href="#">JAVA</a></li>
+							<li><a href="#">FRAMEWORK</a></li>
+							<li><a href="#">SCRIPT</a></li>
+							<li><a href="#">STRUCTURE</a></li>
+							<li><a href="#">TOOL</a></li>
+						</ul>
+					</li>
+					<li><a href="#">team</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group"><input type="text" class="form-control" placeholder="Search"></div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
 		</nav>
 	</header>
 	
+	<!-- 가변 영역 -->
 	<article>
 		<section>
 			<div id="indexCarousel" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#indexCarousel" data-slide-to="0" class="active"></li>
 					<li data-target="#indexCarousel" data-slide-to="1"></li>
+					<li data-target="#indexCarousel" data-slide-to="2"></li>
 				</ol>
 				<div class="carousel-inner" role="listbox">
 					<div class="item active"><img src="/img/sample1.jpg" alt="sampleImg1"><div class="carousel-caption"><h3></h3><p></p></div></div>
 					<div class="item"><img src="/img/sample2.jpg" alt="sampleImg2"><div class="carousel-caption"><h3></h3><p></p></div></div>
+					<div class="item"><img src="/img/sample3.jpg" alt="sampleImg"><div class="carousel-caption"><h3></h3><p></p></div></div>
 				</div>
 				<a class="left carousel-control" href="#indexCarousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
+					<span class="icon-prev"></span>
 				</a>
 				<a class="right carousel-control" href="#indexCarousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
+					<span class="icon-next"></span>
 				</a>
 			</div>
 		</section>
@@ -62,8 +73,10 @@
 	   					<div class="thumbnail">
 		   					<img data-src="holder.js/100%x180" alt="picture">
 		   					<div class="caption">
-		   						<h3>Why the picture</h3>
-		   						<p>Record for the feelings and thoughts at the moment. Clicking the 'GO' button, you can view the story of the moment.</p>
+		   						<div class="thumbnail-desc">
+		   							<h3>Why the picture</h3>
+		   							<p>Record for the feelings and thoughts at the moment. Clicking the 'GO' button, you can view the story of the moment.</p>
+		   						</div>
 		   						<p><a href="#" class="btn btn-primary">GO</a> <a href="#" class="btn btn-default">SIMPLE</a></p>
 		   					</div>
 	   					</div>
@@ -72,8 +85,10 @@
 	   					<div class="thumbnail">
 		   					<img data-src="holder.js/100%x180" alt="cooking">
 		   					<div class="caption">
-		   						<h3>Cooking is a gift for everyone</h3>
-		   						<p>Cooking will be able to share the joy of living and free of mind. Clicking the 'GO' button, you can visit my cooking (simple hobby).</p>
+		   						<div class="thumbnail-desc">
+			   						<h3>Cooking is a gift for everyone</h3>
+			   						<p>Cooking will be able to share the joy of living and free of mind. Clicking the 'GO' button, you can visit my cooking (simple hobby).</p>
+		   						</div>
 		   						<p><a href="#" class="btn btn-primary">GO</a> <a href="#" class="btn btn-default">SIMPLE</a></p>
 		   					</div>
 	   					</div>
@@ -82,8 +97,10 @@
 	   					<div class="thumbnail">
 		   					<img data-src="holder.js/100%x180" alt="study">
 		   					<div class="caption">
-		   						<h3>Study the food.</h3>
-		   						<p>The stress on the house and clothes and food are free. I counted the food first. Clicking the 'GO' button, you can see my way to the food.</p>
+		   						<div class="thumbnail-desc">
+			   						<h3>Study the food.</h3>
+			   						<p>The stress on the house and clothes and food are free. I counted the food first. Clicking the 'GO' button, you can see my way to the food.</p>
+								</div>
 		   						<p><a href="#" class="btn btn-primary">GO</a> <a href="#" class="btn btn-default">SIMPLE</a></p>
 		   					</div>
 	   					</div>
@@ -92,9 +109,11 @@
 	   					<div class="thumbnail">
 		   					<img data-src="holder.js/100%x180" alt="dev">
 		   					<div class="caption">
-		   						<h3>Software development study</h3>
-		   						<p>Strive for with our world. I will not make software that can harm people. (GITHUB ID : smrwns / DEV TEAM : darkforce)</p>
-		   						<p><a href="#" class="btn btn-primary">GO</a> <a href="#" class="btn btn-default">SIMPLE</a></p>
+		   						<div class="thumbnail-desc">
+		   							<h3>Software development study</h3>
+		   							<p>Strive for with our world. I will not make software that can harm people. (GITHUB ID : smrwns / DEV TEAM : darkforce)</p>
+	   							</div>
+	   							<p><a href="#" class="btn btn-primary">GO</a> <a href="#" class="btn btn-default">SIMPLE</a></p>
 		   					</div>
 	   					</div>
 	  				</div>
@@ -104,9 +123,9 @@
 	</article>
 	
 	<!-- 임시 -->
-	<aside>aside</aside>
+	<!-- <aside>aside</aside> -->
 	
-	<!-- 고정영역 -->
+	<!-- 고정 영역 -->
 	<footer>
 		Explore the smrwns (세부 메뉴)<br />
 		Copyright © 2015 smrwns. The smrwns is not responsible for the content of external sites.
