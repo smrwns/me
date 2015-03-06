@@ -2,13 +2,26 @@
 
 /* index */
 #indexCarousel	{ margin-bottom: 10px; margin-top: -15px; }
-
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
 	width: 100%;
 	max-height: 400px;
 	margin: auto;
 }
-
 .thumbnail-desc	{ min-height: 190px; }
+
+
+/* board */
+.info-post		{}
+.info-comment	{}
+
+.function-post		{ float: right; }
+.function-comment	{ float: right; }
+.function-post-etc	{ float: left; }
+
+.content-post	{ border: 1px #ddd solid; border-radius: 4px; }
+.content-comment{ border: 1px #ddd solid; border-radius: 4px; }
+
+.writer-post	{}
+.writer-comment	{ background-color: #333; color: #fff; border-radius: 3px;}
 
