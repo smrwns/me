@@ -20,7 +20,7 @@
 .function-post-etc	{ float: left; }
 
 .content-post	{ border: 1px #ddd solid; border-radius: 4px; }
-.content-comment{ border: 1px #ddd solid; border-radius: 4px; }
+.content-comment{ border: 1px #ddd solid; border-radius: 4px; margin-top: 10px; }
 
 .writer-post	{}
 .writer-comment	{ background-color: #333; color: #fff; border-radius: 3px;}
