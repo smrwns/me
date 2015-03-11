@@ -12,7 +12,7 @@
 
 
 /* board */
-.info-post		{}
+.info-post		{ border: 1px #ddd solid; border-radius: 4px; margin-bottom: 5px; }
 .info-comment	{}
 
 .function-post		{ float: right; }
@@ -25,3 +25,5 @@
 .writer-post	{}
 .writer-comment	{ background-color: #333; color: #fff; border-radius: 3px;}
 
+.title		{}
+.date-post	{ color: #d0d0d0; padding-left: 10px; }
